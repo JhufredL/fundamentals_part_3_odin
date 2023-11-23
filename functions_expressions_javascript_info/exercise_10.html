@@ -9,9 +9,13 @@
     <script>
         "use strict";
         
-        function doNothing() { /* empty */ }
+        let age = prompt("What is your age?", 18);
         
-        alert( doNothing() === undefined ); // true
+        let welcome = (age < 18) ?
+          function() { alert("Hello!"); } :
+          function() { alert("Greetings!"); };
+        
+        welcome(); // ok now
         </script>
 </body>
 </html>

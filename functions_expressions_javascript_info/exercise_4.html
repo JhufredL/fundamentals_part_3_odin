@@ -9,14 +9,16 @@
     <script>
         "use strict";
         
-        function sayHi() {   // (1) create
-          alert( "Hello" );
+        function ask(question, yes, no) {
+          if (confirm(question)) yes()
+          else no();
         }
         
-        let func = sayHi;    // (2) copy
-        
-        func(); // Hello     // (3) run the copy (it works)!
-        sayHi(); // Hello    //     this still works too (why wouldn't it)
+        ask(
+          "Do you agree?",
+          function() { alert("You agreed."); },
+          function() { alert("You canceled the execution."); }
+        );
         </script>
 </body>
 </html>

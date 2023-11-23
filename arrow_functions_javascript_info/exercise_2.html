@@ -7,9 +7,12 @@
 </head>
 <body>
     <script>
-        function checkAge(age) {
-  return (age > 18) ? true : confirm('Did parents allow you?');
-}
-    </script>
+        "use strict";
+        
+        let double = n => n * 2;
+        // roughly the same as: let double = function(n) { return n * 2 }
+        
+        alert( double(3) ); // 6
+        </script>
 </body>
 </html>

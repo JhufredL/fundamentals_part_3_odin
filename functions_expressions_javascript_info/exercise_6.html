@@ -7,9 +7,13 @@
 </head>
 <body>
     <script>
-        function checkAge(age) {
-  return (age > 18) ? true : confirm('Did parents allow you?');
-}
-    </script>
+        "use strict";
+        
+        sayHi("John"); // error!
+        
+        let sayHi = function(name) {  // (*) no magic any more
+          alert( `Hello, ${name}` );
+        };
+        </script>
 </body>
 </html>

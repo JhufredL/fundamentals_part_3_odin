@@ -9,9 +9,16 @@
     <script>
         "use strict";
         
-        function doNothing() { /* empty */ }
+        let sum = (a, b) => a + b;
         
-        alert( doNothing() === undefined ); // true
+        /* This arrow function is a shorter form of:
+        
+        let sum = function(a, b) {
+          return a + b;
+        };
+        */
+        
+        alert( sum(1, 2) ); // 3
         </script>
 </body>
 </html>
